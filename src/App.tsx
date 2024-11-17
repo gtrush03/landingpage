@@ -154,7 +154,7 @@ export default function App() {
                         <span className="text-gray-300 group-hover:text-white transition-colors">
                           I agree to receive updates and accept the{' '}
                           <a
-                            href="https://trusynth.com/privacypolicy"
+                            href="https://doc.trusynth.com/privacypolicy"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-[#928466] hover:text-white underline transition-colors relative z-20 pointer-events-auto"
@@ -204,7 +204,7 @@ export default function App() {
                     <span className="text-sm">hello@trusynth.com</span>
                   </a>
                   <a 
-                    href="https://trusynth.com/mediakit"
+                    href="https://doc.trusynth.com/mediakit"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 hover:text-white transition-colors"
