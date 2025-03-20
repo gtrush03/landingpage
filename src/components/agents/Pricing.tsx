@@ -3,7 +3,24 @@ import { useNavigate } from 'react-router-dom';
 import { Calendar, Check, ChevronRight, Sparkles, Users, Bot, Zap, Clock, MessageSquare, Database, Shield } from 'lucide-react';
 import { Frame } from './common';
 
-const plans = [
+interface Plan {
+  title: string;
+  basePrice: number | null;
+  priceLabel?: string;
+  features: string[];
+  addons?: string[];
+  requirements?: string[];
+  setupFee: number | null;
+  setupLabel?: string;
+  commitment: string;
+  buttonText: string;
+  crossedOutFeature?: string;
+  successPath?: string;
+  route?: string;
+  paymentLink?: string;
+}
+
+const plans: Plan[] = [
   {
     title: "Digital Employees",
     basePrice: 1997,
@@ -25,7 +42,8 @@ const plans = [
     commitment: "3 months min.",
     buttonText: "Sign Up Now",
     crossedOutFeature: "Multiple AI agent projects simultaneously",
-    successPath: "/payment-success/digital-employees"
+    successPath: "/payment-success/digital-employees",
+    paymentLink: "https://buy.stripe.com/5kAaGRdo78nC7uwfYY"
   },
   {
     title: "AI Digital Team",
@@ -48,7 +66,8 @@ const plans = [
     commitment: "3 months min.",
     buttonText: "Sign Up Now",
     crossedOutFeature: "Multiple AI agent projects simultaneously",
-    successPath: "/payment-success/digital-team"
+    successPath: "/payment-success/digital-team",
+    paymentLink: "https://buy.stripe.com/5kAaGRdo78nC7uwfYY"
   },
   {
     title: "SYNTH<strong>OS</strong>",
@@ -83,7 +102,7 @@ const plans = [
   }
 ];
 
-const PricingCard = ({ plan, navigate }) => {
+const PricingCard = ({ plan, navigate }: { plan: Plan; navigate: (path: string) => void }) => {
   return (
     <div className="relative group">
       {/* Background with gradient overlay */}
@@ -121,7 +140,7 @@ const PricingCard = ({ plan, navigate }) => {
 
         {/* Features */}
         <div className="space-y-4 mb-8">
-          {plan.features.map((feature, index) => (
+          {plan.features.map((feature: string, index: number) => (
             <div key={index} className="flex items-start gap-3">
               <Check size={16} className="text-[#928466] flex-shrink-0 mt-1" />
               <span className="text-white/80 text-sm">{feature}</span>
@@ -142,7 +161,7 @@ const PricingCard = ({ plan, navigate }) => {
               Outcome-Based Add-ons
             </div>
             <div className="space-y-3">
-              {plan.addons.map((addon, index) => (
+              {plan.addons.map((addon: string, index: number) => (
                 <div key={index} className="flex items-start gap-2">
                   <span className="text-[#928466] text-lg leading-none">➕</span>
                   <span className="text-white/80 text-sm">{addon}</span>
@@ -159,7 +178,7 @@ const PricingCard = ({ plan, navigate }) => {
               <div className="text-sm text-white/40 uppercase tracking-wider">
                 Requirements
               </div>
-              {plan.requirements.map((req, index) => (
+              {plan.requirements.map((req: string, index: number) => (
                 <div key={index} className="flex items-start gap-2">
                   <div className="h-1.5 w-1.5 rounded-full bg-[#928466] mt-2" />
                   <span className="text-white/80 text-sm">{req}</span>
@@ -170,7 +189,7 @@ const PricingCard = ({ plan, navigate }) => {
             <>
               <div className="flex justify-between items-center text-sm">
                 <span className="text-white/40">Setup Fee</span>
-                <span className="text-white/80">${plan.setupFee.toLocaleString()}</span>
+                <span className="text-white/80">${plan.setupFee?.toLocaleString()}</span>
               </div>
               <div className="flex justify-between items-center text-sm mt-2">
                 <span className="text-white/40">Commitment</span>
@@ -186,6 +205,8 @@ const PricingCard = ({ plan, navigate }) => {
             if (plan.route) {
               window.scrollTo(0, 0);
               navigate(plan.route);
+            } else if (plan.paymentLink) {
+              window.location.href = plan.paymentLink;
             } else if (plan.successPath) {
               navigate(plan.successPath);
             } else {
