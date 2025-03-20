@@ -1,0 +1,21 @@
+# robots.txt for TRU SYNTH
+
+User-agent: *
+Allow: /
+
+# Allow all bots to access the entire site
+Disallow: 
+
+# Sitemap location
+Sitemap: https://trusynth.com/sitemap.xml
+
+# Specific page crawl directives
+Allow: /agents
+Allow: /tuning
+Allow: /synthos
+Allow: /horizon
+Allow: /blog
+Allow: /join
+
+# Prevent duplicate content issues with 404 page
+Disallow: /404.html
