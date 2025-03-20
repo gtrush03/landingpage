@@ -43,7 +43,7 @@ const plans: Plan[] = [
     buttonText: "Sign Up Now",
     crossedOutFeature: "Multiple AI agent projects simultaneously",
     successPath: "/payment-success/digital-employees",
-    paymentLink: "https://buy.stripe.com/5kAaGRdo78nC7uwfYY"
+    paymentLink: "https://buy.stripe.com/28o8yJabVdHW168cMN"
   },
   {
     title: "AI Digital Team",
