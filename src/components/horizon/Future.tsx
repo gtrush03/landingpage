@@ -19,7 +19,7 @@ export default function Future() {
 
             <button 
               onClick={() => {
-                window.location.href = 'https://nd2nkx5y1hc.typeform.com/to/SRmPclmc';
+                window.location.href = 'https://form.typeform.com/to/SRmPclmc';
               }}
               className="group relative overflow-hidden inline-flex items-center justify-center px-6 py-3 rounded-lg bg-gradient-to-r from-[#928466] to-[#B7A98B] transition-all duration-500 hover:scale-105"
             >

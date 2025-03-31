@@ -210,7 +210,7 @@ const PricingCard = ({ plan, navigate }: { plan: Plan; navigate: (path: string) 
             } else if (plan.successPath) {
               navigate(plan.successPath);
             } else {
-              window.location.href = 'https://nd2nkx5y1hc.typeform.com/to/EhZyapjJ';
+              window.location.href = 'https://form.typeform.com/to/EhZyapjJ';
             }
           }}
           className="w-full group relative overflow-hidden px-6 py-3 rounded-lg bg-[#928466]/20 hover:bg-[#928466]/30 border border-[#928466]/30 hover:border-[#928466] transition-all duration-500"
@@ -257,7 +257,7 @@ export default function Pricing() {
           <div className="text-center">
             <button 
               onClick={() => {
-                window.location.href = 'https://nd2nkx5y1hc.typeform.com/to/EhZyapjJ';
+                window.location.href = 'https://form.typeform.com/to/EhZyapjJ';
               }}
               className="group relative overflow-hidden inline-flex items-center justify-center px-8 py-4 rounded-lg bg-gradient-to-r from-[#928466] to-[#B7A98B] transition-all duration-500 hover:scale-105"
             >

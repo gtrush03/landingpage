@@ -153,7 +153,7 @@ export default function HowItWorks() {
           {/* Call to Action */}
           <div className="text-center mt-16">
             <a 
-              href="https://nd2nkx5y1hc.typeform.com/trusynth-ai"
+              href="https://form.typeform.com/to/l2i1r1fy"
               target="_self"
               className="
                 group relative overflow-hidden w-full md:w-auto

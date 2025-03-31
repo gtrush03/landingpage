@@ -163,7 +163,7 @@ export default function JoinSynthos() {
         }
       ],
       image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=80",
-      typeformUrl: "https://nd2nkx5y1hc.typeform.com/to/CpGc4tSy" // Add your Typeform URL here
+      typeformUrl: "https://form.typeform.com/to/CpGc4tSy" // Add your Typeform URL here
     },
     {
       id: "investor",
@@ -211,7 +211,7 @@ export default function JoinSynthos() {
         }
       ],
       image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=2000&q=80",
-      typeformUrl: "https://nd2nkx5y1hc.typeform.com/to/wiMAb7XQ" // Add your Typeform URL here
+      typeformUrl: "https://form.typeform.com/to/wiMAb7XQ" // Add your Typeform URL here
     },
     {
       id: "developer",
@@ -259,7 +259,7 @@ export default function JoinSynthos() {
         }
       ],
       image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2000&q=80",
-      typeformUrl: "https://nd2nkx5y1hc.typeform.com/to/A7g5H1ff" // Add your Typeform URL here
+      typeformUrl: "https://form.typeform.com/to/A7g5H1ff" // Add your Typeform URL here
     }
   ];
 

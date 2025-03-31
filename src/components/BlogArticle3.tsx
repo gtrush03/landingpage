@@ -230,7 +230,7 @@ export default function BlogArticle3() {
                 
                 <button 
                   onClick={() => {
-                    window.location.href = 'https://nd2nkx5y1hc.typeform.com/to/EhZyapjJ';
+                    window.location.href = 'https://form.typeform.com/to/EhZyapjJ';
                   }}
                   className="
                     group relative overflow-hidden inline-flex items-center justify-center 

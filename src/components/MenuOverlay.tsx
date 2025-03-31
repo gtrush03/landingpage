@@ -151,7 +151,7 @@ export default function MenuOverlay({ isOpen, menuType, onClose }: MenuOverlayPr
                     
                     <button
                       onClick={() => {
-                        window.location.href = 'https://nd2nkx5y1hc.typeform.com/to/EhZyapjJ';
+                        window.location.href = 'https://form.typeform.com/to/EhZyapjJ';
                       }}
                       className="
                         w-full group relative overflow-hidden
