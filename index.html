@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=%VITE_GA_MEASUREMENT_ID%"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '%VITE_GA_MEASUREMENT_ID%');
+    </script>
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#928466">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    
+    <!-- SEO Optimized Title and Meta Tags -->
+    <title>TRU SYNTH | Advanced AI Solutions for Business Automation</title>
+    <meta name="description" content="Transform your business with TRU SYNTH's AI agents, model tuning, and autonomous systems. Streamline operations and optimize decision-making with our intelligent solutions." />
+    <meta name="keywords" content="AI solutions, business automation, autonomous agents, model tuning, AI optimization, SYNTHOS" />
+    
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://trusynth.com" />
+    <meta property="og:title" content="TRU SYNTH | Advanced AI Solutions for Business Automation" />
+    <meta property="og:description" content="Transform your business with TRU SYNTH's AI agents, model tuning, and autonomous systems. Streamline operations and optimize decision-making with our intelligent solutions." />
+    <meta property="og:image" content="https://i.imgur.com/UKbzPyp.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="TRU SYNTH" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@trusynth" />
+    <meta name="twitter:creator" content="@trusynth" />
+    <meta name="twitter:title" content="TRU SYNTH | Advanced AI Solutions for Business Automation" />
+    <meta name="twitter:description" content="Transform your business with TRU SYNTH's AI agents, model tuning, and autonomous systems. Streamline operations and optimize decision-making with our intelligent solutions." />
+    <meta name="twitter:image" content="https://i.imgur.com/UKbzPyp.png" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://trusynth.com" />
+    
+    <!-- Handle page refresh and navigation -->
+    <script>
+      (function() {
+        // Save the path before unload
+        window.addEventListener('beforeunload', function() {
+          const currentPath = window.location.pathname;
+          sessionStorage.setItem('lastPath', currentPath);
+        });
+        
+        // Check if we need to redirect on load
+        window.addEventListener('DOMContentLoaded', function() {
+          const lastPath = sessionStorage.getItem('lastPath');
+          const currentPath = window.location.pathname;
+          
+          // If we're on the 404 page and have a saved path, redirect
+          if ((currentPath === '/404.html' || currentPath === '/404') && lastPath && lastPath !== '/404.html' && lastPath !== '/404') {
+            window.location.replace(lastPath);
+          }
+        });
+      })();
+    </script>
+    
+    <!-- Enhanced Structured Data for Rich Results -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://trusynth.com/#organization",
+        "name": "TRU SYNTH",
+        "url": "https://trusynth.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://trusynth.com/logo.png",
+          "width": 512,
+          "height": 512
+        },
+        "description": "Advanced AI solutions for business automation and optimization.",
+        "sameAs": [
+          "https://linkedin.com/company/trusynth",
+          "https://x.com/trusynth"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-555-123-4567",
+          "contactType": "customer service",
+          "email": "info@trusynth.com",
+          "availableLanguage": ["English"]
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://trusynth.com/#website",
+        "url": "https://trusynth.com",
+        "name": "TRU SYNTH",
+        "description": "Advanced AI Solutions for Business Automation",
+        "publisher": {
+          "@id": "https://trusynth.com/#organization"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "Service",
+            "name": "AI Agents",
+            "description": "Autonomous digital employees that operate independently 24/7, handling complex tasks with precision and adaptability.",
+            "offers": {
+              "@type": "Offer",
+              "price": "1997.00",
+              "priceCurrency": "USD",
+              "priceValidUntil": "2025-12-31",
+              "availability": "https://schema.org/InStock"
+            }
+          },
+          {
+            "@type": "Service",
+            "name": "Model Tuning",
+            "description": "Custom-tuned AI models that perfectly match your business needs and operational requirements.",
+            "offers": {
+              "@type": "Offer",
+              "price": "2997.00",
+              "priceCurrency": "USD",
+              "priceValidUntil": "2025-12-31",
+              "availability": "https://schema.org/InStock"
+            }
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "SYNTHOS",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Cloud",
+            "description": "Comprehensive operational system that centralizes and automates all aspects of business functions from a single, intelligent command center."
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is TRU SYNTH?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "TRU SYNTH is a provider of advanced AI solutions for business automation, offering AI agents, model tuning, and autonomous systems that streamline operations and optimize decision-making."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What services does TRU SYNTH offer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "TRU SYNTH offers AI Agents for autonomous task execution, Model Tuning for custom AI solutions, and SYNTHOS - a comprehensive business operations platform."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

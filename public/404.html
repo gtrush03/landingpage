@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Page Not Found - TRU SYNTH</title>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@1,900,700,500,300,100&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Satoshi', sans-serif;
+      background: black;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 0.05em;
+      font-weight: 100;
+    }
+
+    .container {
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .background {
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(146,132,102,0.1), transparent 70%);
+      z-index: 1;
+    }
+
+    .error-code {
+      font-size: 8rem;
+      font-weight: 100;
+      color: rgba(146,132,102, 0.8);
+      margin: 0;
+      line-height: 1;
+      text-shadow: 0 0 20px rgba(146,132,102, 0.4);
+    }
+
+    .message {
+      font-size: 1.5rem;
+      color: rgba(255,255,255,0.8);
+      margin: 1rem 0 2rem;
+    }
+
+    .search-box {
+      background: rgba(0,0,0,0.6);
+      border: 1px solid rgba(146,132,102,0.3);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      width: 100%;
+      max-width: 400px;
+      color: white;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+
+    .search-box:focus {
+      outline: none;
+      border-color: rgba(146,132,102,0.6);
+      box-shadow: 0 0 10px rgba(146,132,102,0.2);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .nav-link {
+      color: rgba(146,132,102,0.8);
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border: 1px solid rgba(146,132,102,0.3);
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(5px);
+      font-size: 0.875rem;
+      letter-spacing: 0.2em;
+    }
+
+    .nav-link:hover {
+      color: white;
+      border-color: rgba(146,132,102,0.6);
+      background: rgba(146,132,102,0.1);
+    }
+
+    @media (max-width: 640px) {
+      .error-code {
+        font-size: 6rem;
+      }
+      
+      .message {
+        font-size: 1.25rem;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .nav-link {
+        width: 200px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+  <script>
+    // Redirect to saved path if available
+    window.addEventListener('DOMContentLoaded', function() {
+      const lastPath = sessionStorage.getItem('lastPath');
+      if (lastPath && lastPath !== '/404.html' && lastPath !== '/404') {
+        window.location.replace(lastPath);
+      } else {
+        // If no saved path, redirect to home
+        setTimeout(function() {
+          window.location.replace('/');
+        }, 100);
+      }
+    });
+  </script>
+</head>
+<body>
+  <div class="background"></div>
+  
+  <div class="container">
+    <h1 class="error-code">404</h1>
+    <p class="message">Redirecting you back...</p>
+    
+    <nav class="nav-links">
+      <a href="/" class="nav-link">HOME</a>
+      <a href="/agents" class="nav-link">AI AGENTS</a>
+      <a href="/tuning" class="nav-link">TUNING</a>
+      <a href="/synthos" class="nav-link">SYNTH<strong>OS</strong></a>
+      <a href="/horizon" class="nav-link">HORIZON</a>
+    </nav>
+  </div>
+</body>
+</html>

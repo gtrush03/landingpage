@@ -1,0 +1,956 @@
+# TRU SYNTH - COMPREHENSIVE DEVELOPMENT RULES & GUIDELINES
+
+## PROJECT OVERVIEW
+TRU SYNTH is a premium AI consulting and development platform featuring autonomous business operations, digital employees, and advanced AI solutions. The application emphasizes sophisticated design, smooth animations, and enterprise-grade functionality.
+
+## CORE DESIGN PHILOSOPHY
+- **Premium Feel**: Apple-level design aesthetics with meticulous attention to detail
+- **Futuristic Interface**: Sci-fi inspired HUD elements with subtle animations
+- **Professional Elegance**: Clean, sophisticated visual presentation
+- **Responsive Excellence**: Optimal viewing across all devices
+- **Performance First**: Smooth interactions and fast loading times
+
+## COLOR SYSTEM & BRANDING
+
+### Primary Colors
+```css
+--primary-gold: #928466;        /* Main brand color - sophisticated gold */
+--primary-gold-light: #B7A98B;  /* Lighter variant for gradients */
+--primary-gold-dark: #6B5D4A;   /* Darker variant for depth */
+```
+
+### Background Colors
+```css
+--bg-primary: #000000;          /* Pure black background */
+--bg-secondary: rgba(0,0,0,0.8); /* Semi-transparent black */
+--bg-tertiary: rgba(0,0,0,0.4);  /* Light black overlay */
+--bg-card: rgba(0,0,0,0.6);     /* Card backgrounds */
+```
+
+### Text Colors
+```css
+--text-primary: #FFFFFF;         /* Primary white text */
+--text-secondary: rgba(255,255,255,0.8); /* Secondary white */
+--text-muted: rgba(255,255,255,0.6);     /* Muted white */
+--text-subtle: rgba(255,255,255,0.4);    /* Subtle white */
+--text-accent: #928466;          /* Gold accent text */
+```
+
+### Opacity Levels
+```css
+--opacity-full: 1.0;
+--opacity-high: 0.8;
+--opacity-medium: 0.6;
+--opacity-low: 0.4;
+--opacity-subtle: 0.2;
+--opacity-minimal: 0.1;
+```
+
+### Border Colors
+```css
+--border-primary: rgba(146,132,102,0.3);   /* Standard borders */
+--border-hover: rgba(146,132,102,0.6);     /* Hover state borders */
+--border-active: #928466;                  /* Active/focused borders */
+--border-subtle: rgba(146,132,102,0.1);    /* Subtle dividers */
+```
+
+## TYPOGRAPHY SYSTEM
+
+### Font Family
+```css
+font-family: 'Satoshi', sans-serif;
+```
+
+### Font Weights
+- **Thin**: 100 (primary for large headings)
+- **Light**: 300 (secondary text)
+- **Normal**: 400 (body text)
+- **Medium**: 500 (emphasis)
+- **Bold**: 700 (strong emphasis)
+
+### Font Sizes & Hierarchy
+```css
+/* Headings */
+--text-6xl: 3.75rem;    /* 60px - Hero titles */
+--text-5xl: 3rem;       /* 48px - Page titles */
+--text-4xl: 2.25rem;    /* 36px - Section titles */
+--text-3xl: 1.875rem;   /* 30px - Subsection titles */
+--text-2xl: 1.5rem;     /* 24px - Card titles */
+--text-xl: 1.25rem;     /* 20px - Large text */
+
+/* Body Text */
+--text-lg: 1.125rem;    /* 18px - Large body */
+--text-base: 1rem;      /* 16px - Standard body */
+--text-sm: 0.875rem;    /* 14px - Small text */
+--text-xs: 0.75rem;     /* 12px - Captions */
+```
+
+### Letter Spacing
+```css
+--tracking-tight: -0.025em;
+--tracking-normal: 0em;
+--tracking-wide: 0.025em;
+--tracking-wider: 0.05em;
+--tracking-widest: 0.1em;
+--tracking-ultra: 0.2em;    /* For titles */
+--tracking-extreme: 0.3em;  /* For hero text */
+```
+
+### Line Heights
+```css
+--leading-tight: 1.25;      /* Headings */
+--leading-snug: 1.375;      /* Subheadings */
+--leading-normal: 1.5;      /* Body text */
+--leading-relaxed: 1.625;   /* Comfortable reading */
+--leading-loose: 2;         /* Spacious text */
+```
+
+## SPACING SYSTEM (8px Grid)
+
+### Base Unit: 8px
+```css
+--space-1: 0.25rem;   /* 4px */
+--space-2: 0.5rem;    /* 8px */
+--space-3: 0.75rem;   /* 12px */
+--space-4: 1rem;      /* 16px */
+--space-5: 1.25rem;   /* 20px */
+--space-6: 1.5rem;    /* 24px */
+--space-8: 2rem;      /* 32px */
+--space-10: 2.5rem;   /* 40px */
+--space-12: 3rem;     /* 48px */
+--space-16: 4rem;     /* 64px */
+--space-20: 5rem;     /* 80px */
+--space-24: 6rem;     /* 96px */
+--space-32: 8rem;     /* 128px */
+```
+
+### Component Spacing
+```css
+/* Padding */
+--padding-card: 1.5rem;      /* Standard card padding */
+--padding-section: 2rem;     /* Section padding */
+--padding-container: 1.5rem; /* Container padding */
+
+/* Margins */
+--margin-section: 4rem;      /* Between sections */
+--margin-element: 1rem;      /* Between elements */
+--margin-tight: 0.5rem;      /* Tight spacing */
+```
+
+## ANIMATION SYSTEM
+
+### Timing Functions
+```css
+--ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+--ease-in: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+--ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+--ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+```
+
+### Duration Standards
+```css
+--duration-fast: 150ms;      /* Quick interactions */
+--duration-normal: 300ms;    /* Standard transitions */
+--duration-slow: 500ms;      /* Smooth animations */
+--duration-slower: 700ms;    /* Dramatic effects */
+--duration-slowest: 1000ms;  /* Hero animations */
+```
+
+### Standard Animations
+```css
+/* Fade In */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scale In */
+@keyframes scaleIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Slide In Left */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Slide In Right */
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Pulse */
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.05); }
+}
+
+/* Glow */
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(146,132,102,0.3); }
+  50% { box-shadow: 0 0 20px rgba(146,132,102,0.6); }
+}
+```
+
+## COMPONENT PATTERNS
+
+### Card Components
+```css
+.card-base {
+  background: rgba(0,0,0,0.4);
+  border: 1px solid rgba(146,132,102,0.3);
+  border-radius: 0.5rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.card-hover {
+  &:hover {
+    border-color: rgba(146,132,102,0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  }
+}
+```
+
+### Button Components
+```css
+.btn-primary {
+  background: linear-gradient(to right, #928466, #B7A98B);
+  color: #000000;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(146,132,102,0.4);
+  }
+}
+
+.btn-secondary {
+  background: rgba(146,132,102,0.1);
+  border: 1px solid rgba(146,132,102,0.3);
+  color: #928466;
+  
+  &:hover {
+    background: rgba(146,132,102,0.2);
+    border-color: #928466;
+    color: #ffffff;
+  }
+}
+```
+
+### Input Components
+```css
+.input-base {
+  background: rgba(0,0,0,0.6);
+  border: 1px solid rgba(146,132,102,0.3);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  color: rgba(255,255,255,0.8);
+  backdrop-filter: blur(10px);
+  
+  &:focus {
+    outline: none;
+    border-color: #928466;
+    box-shadow: 0 0 10px rgba(146,132,102,0.2);
+  }
+}
+```
+
+## LAYOUT PATTERNS
+
+### Container Patterns
+```css
+.container-full {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.container-wide {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.container-standard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.container-narrow {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+```
+
+### Grid Patterns
+```css
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+```
+
+### Flexbox Patterns
+```css
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+```
+
+## RESPONSIVE DESIGN
+
+### Breakpoints
+```css
+/* Mobile First Approach */
+--breakpoint-sm: 640px;   /* Small devices */
+--breakpoint-md: 768px;   /* Medium devices */
+--breakpoint-lg: 1024px;  /* Large devices */
+--breakpoint-xl: 1280px;  /* Extra large devices */
+--breakpoint-2xl: 1536px; /* 2X large devices */
+```
+
+### Responsive Patterns
+```css
+/* Mobile First */
+.responsive-text {
+  font-size: 1rem;
+  
+  @media (min-width: 768px) {
+    font-size: 1.125rem;
+  }
+  
+  @media (min-width: 1024px) {
+    font-size: 1.25rem;
+  }
+}
+
+.responsive-spacing {
+  padding: 1rem;
+  
+  @media (min-width: 768px) {
+    padding: 1.5rem;
+  }
+  
+  @media (min-width: 1024px) {
+    padding: 2rem;
+  }
+}
+```
+
+## BACKGROUND EFFECTS
+
+### Gradient Patterns
+```css
+.bg-radial-primary {
+  background: radial-gradient(circle at center, rgba(146,132,102,0.1), transparent 70%);
+}
+
+.bg-linear-fade {
+  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.8));
+}
+
+.bg-conic-glow {
+  background: conic-gradient(from 0deg, transparent, rgba(146,132,102,0.4), transparent);
+}
+```
+
+### Backdrop Effects
+```css
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px);
+}
+
+.backdrop-blur {
+  backdrop-filter: blur(8px);
+}
+
+.backdrop-blur-lg {
+  backdrop-filter: blur(12px);
+}
+
+.backdrop-blur-xl {
+  backdrop-filter: blur(16px);
+}
+```
+
+## COMPONENT ARCHITECTURE
+
+### File Structure
+```
+src/
+├── components/
+│   ├── [PageName]/
+│   │   ├── index.tsx          # Main page component
+│   │   ├── [Section].tsx      # Individual sections
+│   │   └── common.tsx         # Shared components
+│   ├── common/                # Reusable components
+│   └── ui/                    # Base UI components
+├── hooks/                     # Custom React hooks
+├── utils/                     # Utility functions
+└── types/                     # TypeScript definitions
+```
+
+### Component Naming Conventions
+- **PascalCase** for component names
+- **camelCase** for props and variables
+- **kebab-case** for CSS classes
+- **SCREAMING_SNAKE_CASE** for constants
+
+### Props Interface Pattern
+```typescript
+interface ComponentProps {
+  children?: React.ReactNode;
+  className?: string;
+  variant?: 'primary' | 'secondary' | 'tertiary';
+  size?: 'sm' | 'md' | 'lg';
+  disabled?: boolean;
+  onClick?: () => void;
+}
+```
+
+## STATE MANAGEMENT
+
+### useState Patterns
+```typescript
+// Simple state
+const [isOpen, setIsOpen] = useState(false);
+
+// Object state
+const [formData, setFormData] = useState({
+  name: '',
+  email: '',
+  message: ''
+});
+
+// Array state
+const [items, setItems] = useState<Item[]>([]);
+```
+
+### useEffect Patterns
+```typescript
+// Component mount
+useEffect(() => {
+  // Initialization logic
+  return () => {
+    // Cleanup logic
+  };
+}, []);
+
+// Dependency tracking
+useEffect(() => {
+  // Effect logic
+}, [dependency]);
+
+// Async operations
+useEffect(() => {
+  const fetchData = async () => {
+    try {
+      const data = await api.getData();
+      setData(data);
+    } catch (error) {
+      setError(error);
+    }
+  };
+  
+  fetchData();
+}, []);
+```
+
+## ANIMATION IMPLEMENTATION
+
+### CSS Animations
+```css
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-slideIn {
+  animation: slideInLeft 0.5s ease-out forwards;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+```
+
+### React Animation Patterns
+```typescript
+// Staggered animations
+const [visibleItems, setVisibleItems] = useState(0);
+
+useEffect(() => {
+  const timer = setInterval(() => {
+    setVisibleItems(prev => prev + 1);
+  }, 100);
+  
+  return () => clearInterval(timer);
+}, []);
+
+// Intersection Observer for scroll animations
+const [isVisible, setIsVisible] = useState(false);
+const ref = useRef<HTMLDivElement>(null);
+
+useEffect(() => {
+  const observer = new IntersectionObserver(
+    ([entry]) => setIsVisible(entry.isIntersecting),
+    { threshold: 0.1 }
+  );
+  
+  if (ref.current) observer.observe(ref.current);
+  
+  return () => observer.disconnect();
+}, []);
+```
+
+## FORM HANDLING
+
+### Form Component Pattern
+```typescript
+interface FormData {
+  [key: string]: string | number | boolean;
+}
+
+const useForm = <T extends FormData>(initialData: T) => {
+  const [data, setData] = useState<T>(initialData);
+  const [errors, setErrors] = useState<Partial<T>>({});
+  
+  const handleChange = (field: keyof T, value: T[keyof T]) => {
+    setData(prev => ({ ...prev, [field]: value }));
+    if (errors[field]) {
+      setErrors(prev => ({ ...prev, [field]: undefined }));
+    }
+  };
+  
+  const validate = (rules: ValidationRules<T>) => {
+    const newErrors: Partial<T> = {};
+    // Validation logic
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+  
+  return { data, errors, handleChange, validate };
+};
+```
+
+## ERROR HANDLING
+
+### Error Boundary Pattern
+```typescript
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <ErrorFallback />;
+    }
+    
+    return this.props.children;
+  }
+}
+```
+
+### Async Error Handling
+```typescript
+const useAsyncOperation = () => {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  
+  const execute = async (operation: () => Promise<any>) => {
+    try {
+      setLoading(true);
+      setError(null);
+      const result = await operation();
+      return result;
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'An error occurred');
+      throw err;
+    } finally {
+      setLoading(false);
+    }
+  };
+  
+  return { loading, error, execute };
+};
+```
+
+## PERFORMANCE OPTIMIZATION
+
+### Code Splitting
+```typescript
+// Lazy loading components
+const LazyComponent = React.lazy(() => import('./LazyComponent'));
+
+// Route-based splitting
+const HomePage = React.lazy(() => import('./pages/HomePage'));
+const AboutPage = React.lazy(() => import('./pages/AboutPage'));
+```
+
+### Memoization Patterns
+```typescript
+// React.memo for components
+const MemoizedComponent = React.memo(({ prop1, prop2 }) => {
+  return <div>{prop1} {prop2}</div>;
+});
+
+// useMemo for expensive calculations
+const expensiveValue = useMemo(() => {
+  return heavyCalculation(data);
+}, [data]);
+
+// useCallback for function references
+const handleClick = useCallback(() => {
+  // Handle click logic
+}, [dependency]);
+```
+
+## ACCESSIBILITY GUIDELINES
+
+### ARIA Patterns
+```typescript
+// Button with ARIA
+<button
+  aria-label="Close dialog"
+  aria-expanded={isOpen}
+  aria-controls="dialog-content"
+  onClick={handleClose}
+>
+  <CloseIcon />
+</button>
+
+// Form with ARIA
+<input
+  aria-label="Email address"
+  aria-describedby="email-error"
+  aria-invalid={!!errors.email}
+  type="email"
+  value={email}
+  onChange={handleEmailChange}
+/>
+```
+
+### Keyboard Navigation
+```typescript
+const useKeyboardNavigation = (items: any[], onSelect: (item: any) => void) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      switch (e.key) {
+        case 'ArrowDown':
+          e.preventDefault();
+          setActiveIndex(prev => (prev + 1) % items.length);
+          break;
+        case 'ArrowUp':
+          e.preventDefault();
+          setActiveIndex(prev => (prev - 1 + items.length) % items.length);
+          break;
+        case 'Enter':
+          e.preventDefault();
+          onSelect(items[activeIndex]);
+          break;
+      }
+    };
+    
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [items, activeIndex, onSelect]);
+  
+  return activeIndex;
+};
+```
+
+## TESTING PATTERNS
+
+### Component Testing
+```typescript
+// Test utilities
+const renderWithProviders = (component: React.ReactElement) => {
+  return render(
+    <BrowserRouter>
+      <ThemeProvider>
+        {component}
+      </ThemeProvider>
+    </BrowserRouter>
+  );
+};
+
+// Component test example
+describe('Button Component', () => {
+  it('renders with correct text', () => {
+    renderWithProviders(<Button>Click me</Button>);
+    expect(screen.getByText('Click me')).toBeInTheDocument();
+  });
+  
+  it('calls onClick when clicked', () => {
+    const handleClick = jest.fn();
+    renderWithProviders(<Button onClick={handleClick}>Click me</Button>);
+    fireEvent.click(screen.getByText('Click me'));
+    expect(handleClick).toHaveBeenCalledTimes(1);
+  });
+});
+```
+
+## DEPLOYMENT CONSIDERATIONS
+
+### Environment Variables
+```typescript
+// Environment configuration
+interface Config {
+  apiUrl: string;
+  analyticsId: string;
+  environment: 'development' | 'staging' | 'production';
+}
+
+const config: Config = {
+  apiUrl: import.meta.env.VITE_API_URL || 'http://localhost:3000',
+  analyticsId: import.meta.env.VITE_ANALYTICS_ID || '',
+  environment: import.meta.env.VITE_ENVIRONMENT || 'development',
+};
+```
+
+### Build Optimization
+```typescript
+// Vite configuration patterns
+export default defineConfig({
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+          ui: ['@headlessui/react', 'framer-motion'],
+        },
+      },
+    },
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom'],
+  },
+});
+```
+
+## SECURITY BEST PRACTICES
+
+### Input Sanitization
+```typescript
+// Sanitize user input
+const sanitizeInput = (input: string): string => {
+  return input
+    .replace(/[<>]/g, '') // Remove potential HTML tags
+    .trim()
+    .slice(0, 1000); // Limit length
+};
+
+// Validate email
+const isValidEmail = (email: string): boolean => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+};
+```
+
+### Content Security Policy
+```html
+<!-- CSP headers for security -->
+<meta http-equiv="Content-Security-Policy" 
+      content="default-src 'self'; 
+               script-src 'self' 'unsafe-inline' https://trusted-domain.com;
+               style-src 'self' 'unsafe-inline';
+               img-src 'self' data: https:;">
+```
+
+## MONITORING & ANALYTICS
+
+### Error Tracking
+```typescript
+// Error reporting
+const reportError = (error: Error, context?: any) => {
+  if (process.env.NODE_ENV === 'production') {
+    // Send to error tracking service
+    errorTracker.captureException(error, { extra: context });
+  } else {
+    console.error('Error:', error, context);
+  }
+};
+
+// Performance monitoring
+const trackPerformance = (name: string, duration: number) => {
+  if (process.env.NODE_ENV === 'production') {
+    analytics.track('performance', { name, duration });
+  }
+};
+```
+
+## CODE QUALITY STANDARDS
+
+### ESLint Configuration
+```json
+{
+  "extends": [
+    "eslint:recommended",
+    "@typescript-eslint/recommended",
+    "react-hooks/recommended"
+  ],
+  "rules": {
+    "prefer-const": "error",
+    "no-unused-vars": "error",
+    "no-console": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "react-hooks/exhaustive-deps": "error"
+  }
+}
+```
+
+### Prettier Configuration
+```json
+{
+  "semi": true,
+  "trailingComma": "es5",
+  "singleQuote": true,
+  "printWidth": 80,
+  "tabWidth": 2,
+  "useTabs": false
+}
+```
+
+## DOCUMENTATION STANDARDS
+
+### Component Documentation
+```typescript
+/**
+ * Button component with multiple variants and sizes
+ * 
+ * @param children - Button content
+ * @param variant - Visual style variant
+ * @param size - Button size
+ * @param disabled - Whether button is disabled
+ * @param onClick - Click handler function
+ * 
+ * @example
+ * <Button variant="primary" size="lg" onClick={handleClick}>
+ *   Click me
+ * </Button>
+ */
+interface ButtonProps {
+  children: React.ReactNode;
+  variant?: 'primary' | 'secondary';
+  size?: 'sm' | 'md' | 'lg';
+  disabled?: boolean;
+  onClick?: () => void;
+}
+```
+
+### README Structure
+```markdown
+# Component Name
+
+## Overview
+Brief description of the component's purpose and functionality.
+
+## Props
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| children | ReactNode | - | Content to display |
+| variant | string | 'primary' | Visual variant |
+
+## Usage
+```tsx
+import { Component } from './Component';
+
+<Component variant="primary">
+  Content
+</Component>
+```
+
+## Examples
+[Include common usage examples]
+
+## Accessibility
+[Document accessibility features and requirements]
+```
+
+## MAINTENANCE GUIDELINES
+
+### Code Review Checklist
+- [ ] Follows naming conventions
+- [ ] Includes proper TypeScript types
+- [ ] Has appropriate error handling
+- [ ] Includes accessibility features
+- [ ] Follows responsive design patterns
+- [ ] Uses consistent styling patterns
+- [ ] Includes proper documentation
+- [ ] Has adequate test coverage
+
+### Refactoring Guidelines
+1. **Single Responsibility**: Each component should have one clear purpose
+2. **DRY Principle**: Avoid code duplication through reusable components
+3. **Composition over Inheritance**: Prefer composition patterns
+4. **Performance**: Consider lazy loading and memoization
+5. **Maintainability**: Write self-documenting code with clear naming
+
+---
+
+## CONCLUSION
+
+This CURSORRULES file serves as the comprehensive guide for maintaining consistency, quality, and best practices throughout the TRU SYNTH application. All developers should reference this document when making changes or additions to ensure the codebase remains cohesive and maintainable.
+
+For questions or clarifications, refer to the team lead or update this document through the proper review process.
